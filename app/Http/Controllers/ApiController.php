@@ -36,7 +36,7 @@ class ApiController extends Controller
         // return response()->json(["function"=>"create select"]);
         
         $data = SqlQueryValidation::validate($request->json());
-        return response()->json($data,200);
+        return response()->json($data,201);
     }
 
     
