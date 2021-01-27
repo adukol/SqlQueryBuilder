@@ -1,10 +1,10 @@
 <?php
 
-    namespace App\Factory\SqlQuery;
+    namespace App\Component\SqlQuery;
 
-    use App\Factory\SqlQuery\SqlQueryRead;
+    use App\Component\SqlQuery\SqlQueryRead;
 
-    class SqlQueryFactory  {
+    class SqlQueryBuilder  {
         
         protected static function read($p_query_data){
 

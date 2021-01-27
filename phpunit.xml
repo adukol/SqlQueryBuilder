@@ -9,6 +9,22 @@
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
+    <coverage>
+        <include>
+            <directory suffix=".php">app/Component/SqlQuery</directory>
+            <file>app/Http/Controllers/SqlQueryController.php</file>
+        </include>
+    </coverage>
+    <!-- <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">app/Factory/SqlQuery</directory>
+            <file>//to/file</file>
+            <exclude>
+                <directory suffix=".php">/path/to/files</directory>
+                <file>/path/to/file</file>
+            </exclude>
+        </whitelist>
+    </filter> -->
     <php>
         <env name="APP_ENV" value="testing"/>
         <env name="CACHE_DRIVER" value="array"/>
