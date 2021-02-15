@@ -14,8 +14,8 @@ class CreateTablePassportDetails extends Migration
     public function up()
     {
         Schema::create('passport_detail', function (Blueprint $table) {
-            $table->bigIncrements("pd_id");
-            $table->unsignedBigInteger("profile_id");
+            $table->increments("pd_id");
+            $table->integer("profile_id")->unsigned()->index();
             $table->foreign("profile_id")->references('profile_id')->on('profile'); 
             $table->string("pd_passportNumber");
             $table->string("pd_country");

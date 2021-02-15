@@ -11,10 +11,16 @@
     </testsuites>
     <coverage>
         <include>
+            <directory suffix=".php">app/BuilderPattern/SqlQueryRead</directory>
+            <file>app/Http/Controllers/SqlQueryReadController.php</file>
+        </include>
+    </coverage>
+    <!-- <coverage>
+        <include>
             <directory suffix=".php">app/Component/SqlQuery</directory>
             <file>app/Http/Controllers/SqlQueryController.php</file>
         </include>
-    </coverage>
+    </coverage> -->
     <!-- <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">app/Factory/SqlQuery</directory>

@@ -19,9 +19,10 @@ $router->get('/', function () use ($router) {
 
 $router->group(['prefix' => 'api'], function () use ($router){
 
-    $router->get('table', 'SqlQueryController@getAllTable');
-    $router->get('{tableName}/column', 'SqlQueryController@getAllColumn');
-    $router->post('create_sql_query', 'SqlQueryController@createSqlQuery');
+    $router->get('table', 'SqlQueryReadController@getAllTable');
+    $router->get('{tableName}/column', 'SqlQueryReadController@getAllColumn');
+    $router->post('create_sql_query', 'SqlQueryReadController@createSqlQueryRead');
+    $router->post('check_token', 'SqlQueryReadController@validateToken');
 
     // $router->post('authors', 'AuthorController@createAuthor');
     // $router->get('authors/{id}', 'AuthorController@showOneAuthor');

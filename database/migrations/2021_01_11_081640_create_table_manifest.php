@@ -14,9 +14,9 @@ class CreateTableManifest extends Migration
     public function up()
     {
         Schema::create('manifest', function (Blueprint $table) {
-            $table->bigIncrements("manifest_id");
-            $table->unsignedBigInteger("profile_id");
-            $table->foreign("profile_id")->references("profile_id")->on("profile");
+            $table->increments("manifest_id");
+            $table->integer("profile_id")->unsigned()->index();
+            $table->foreign("profile_id")->references('profile_id')->on('profile'); 
             $table->string("manifest_airlineNumber");
             $table->string("manifest_airlineCode");
             $table->string("manifest_flightNo");

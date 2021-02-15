@@ -14,16 +14,18 @@ class CreateTableProfile extends Migration
     public function up()
     {
         Schema::create('profile', function (Blueprint $table) {
-            $table->bigIncrements("profile_id");
+            $table->increments("profile_id");
             $table->string("profile_firstName");
             $table->string("profile_middleName");
             $table->string("profile_lastName");
             $table->string("profile_address");
+            $table->integer("profile_age");
             $table->date("profile_birthDate");
             $table->string("profile_sex");
             $table->string("profile_nationality");
             $table->timestamps();
         });
+
     }
 
     /**
